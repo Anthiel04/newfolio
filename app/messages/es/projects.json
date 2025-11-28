@@ -1,0 +1,17 @@
+{
+  "projects_title": "Mis Proyectos",
+  "projects_subtitle": "Algunos de mis trabajos recientes",
+
+  "project1": {
+    "title": "Ecosistema K-Mart",
+    "description": "Una plataforma e-commerce completa que incluye tienda, blog, panel de administración y API personalizada. Construida con herramientas modernas de React, autenticación completa, gestión de datos y un sistema de UI escalable."
+  },
+  "project2": {
+    "title": "upydate",
+    "description": "Un scraper en Python diseñado para automatizar la descarga de actualizaciones de ESET NOD32, permitiendo reintentos, reanudación y manejo de errores. Creado para solucionar un proceso que era prácticamente imposible de realizar manualmente en el taller."
+  },
+  "project3": {
+    "title": "Conversor JSON a VCF",
+    "description": "Herramienta creada para un cliente que necesitaba convertir contactos exportados desde Telegram en formato JSON a archivos VCF listos para importar. Sencilla, fiable y muy útil."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Contáctame",
+  "description": "Estoy disponible para proyectos freelance o empleo. No dudes en escribirme.",
+  "name": "Tu Nombre",
+  "email": "Tu Correo",
+  "message": "Tu Mensaje",
+  "send": "Enviar",
+  "sending": "Enviando...",
+  "success": "¡Mensaje enviado correctamente!",
+  "error": "Algo salió mal. Intenta de nuevo."
+}

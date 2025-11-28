@@ -1,0 +1,17 @@
+{
+  "projects_title": "My Projects",
+  "projects_subtitle": "Some of my recent work",
+
+  "project1": {
+    "title": "K-Mart Ecosystem",
+    "description": "A complete e-commerce platform including store, blog, admin dashboard, and custom API. Built with modern React tooling and full authentication, data management and UI systems."
+  },
+  "project2": {
+    "title": "upydate",
+    "description": "A Python-based scraper designed to cleanly deliver downloads, automating a process that was previously impossible manually at the workshop."
+  },
+  "project3": {
+    "title": "JSONtoVCF Converter",
+    "description": "A tool built for a client to convert Telegram JSON exports into import-ready VCF contact files. Designed for reliability and ease of use."
+  }
+}
