@@ -45,18 +45,21 @@ export const Footer = () => {
 
         <ul className="flex gap-4 justify-center items-center">
           <li className="hover:text-accent transition-colors cursor-pointer">
-            <Link href="https://github.com" target="_blank">
+            <Link href="https://github.com/Anthiel04" target="_blank">
               GitHub
             </Link>
           </li>
           <li className="hover:text-accent transition-colors cursor-pointer">
-            <Link href="https://linkedin.com" target="_blank">
+            <Link
+              href="https://www.linkedin.com/in/richard-william-moreira-hernández-9141b52ab"
+              target="_blank"
+            >
               LinkedIn
             </Link>
           </li>
           <li className="hover:text-accent transition-colors cursor-pointer">
-            <Link href="https://twitter.com" target="_blank">
-              Twitter
+            <Link href="https://t.me/reinstalador" target="_blank">
+              Telegram
             </Link>
           </li>
         </ul>

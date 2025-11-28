@@ -56,7 +56,7 @@ export const ShowcaseTransition = () => {
 
   return (
     <div
-      className="mt-8 flex flex-col justify-center items-center gap-6 grayscale-25"
+      className="mt-20 flex flex-col justify-center items-center gap-12 grayscale-25 overflow-hidden"
       ref={showcaseRef}
     >
       {projects.map((proj, i) => {

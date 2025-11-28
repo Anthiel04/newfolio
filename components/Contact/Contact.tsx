@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useState } from "react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTelegram } from "react-icons/fa";
 
 export const Contact = () => {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
@@ -46,7 +46,7 @@ export const Contact = () => {
       {/* Social Links */}
       <div className="flex gap-6 mb-12 text-3xl">
         <a
-          href="https://github.com"
+          href="https://github.com/Anthiel04"
           target="_blank"
           aria-label="GitHub"
           className="hover:text-accent transition-colors"
@@ -54,7 +54,7 @@ export const Contact = () => {
           <FaGithub />
         </a>
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/richard-william-moreira-hernández-9141b52ab "
           target="_blank"
           aria-label="LinkedIn"
           className="hover:text-accent transition-colors"
@@ -62,12 +62,12 @@ export const Contact = () => {
           <FaLinkedin />
         </a>
         <a
-          href="https://twitter.com"
+          href="https://t.me/reinstalador"
           target="_blank"
-          aria-label="Twitter"
+          aria-label="Telegram"
           className="hover:text-accent transition-colors"
         >
-          <FaTwitter />
+          <FaTelegram />
         </a>
       </div>
 
