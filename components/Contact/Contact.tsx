@@ -90,6 +90,7 @@ export const Contact = () => {
           rows={5}
           className="px-4 py-2 border border-muted rounded-md bg-bg text-primary dark:bg-bg-dark dark:text-text-dark focus:outline-none focus:ring-2 focus:ring-accent"
         />
+        <h3>PD: Email | Social</h3>
         <button
           type="submit"
           className="px-6 py-3 bg-accent text-bg rounded-md font-medium hover:opacity-90 transition"
@@ -101,9 +102,7 @@ export const Contact = () => {
           <p className="text-sm text-accent mt-2">{t("success")}</p>
         )}
         {status === "error" && (
-          <p className="text-sm text-red-500 mt-2">
-            {t("error")}
-          </p>
+          <p className="text-sm text-red-500 mt-2">{t("error")}</p>
         )}
       </form>
     </section>

@@ -4,6 +4,7 @@ import { Contact } from "../../components/Contact/Contact";
 import { Hero } from "../../components/Hero/Hero";
 import { Projects } from "../../components/Projects/Projects";
 import HorizontalScroll from "../../components/Transitions/HorizontalScroll";
+import { ShowcaseTransition } from "../../components/Transitions/ShowcaseTransition";
 
 export default function Home() {
   const locale = useLocale()
@@ -13,6 +14,7 @@ export default function Home() {
         <Hero />
         <About />
       </HorizontalScroll>
+      <ShowcaseTransition/>
       <Projects />
       <Contact />
     </div>

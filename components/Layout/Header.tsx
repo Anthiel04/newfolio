@@ -58,9 +58,11 @@ export const Header = ({ lang }: { lang: string }) => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
       localStorage.theme = "dark";
+      window.dispatchEvent(new Event("themeStorage"));
     } else {
       document.documentElement.classList.remove("dark");
       localStorage.theme = "light";
+      window.dispatchEvent(new Event("themeStorage"));
     }
   }, [darkMode]);
 
@@ -97,7 +99,7 @@ export const Header = ({ lang }: { lang: string }) => {
         {/* Right controls */}
         <div className="flex items-center gap-3">
           {/* Language switcher */}
-          <LangToggle key={locale} locale={locale}/>
+          <LangToggle key={locale} locale={locale} />
 
           {/* Dark/light toggle */}
           <button

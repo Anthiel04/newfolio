@@ -28,7 +28,6 @@ export default async function LocaleLayout({
   setRequestLocale(locale); // importante para que los hooks client sepan el locale
 
   const messages = getAllMessages(locale);
-  console.log("LOCALE RECIBIDO:", locale);
 
   return (
     <html lang={locale}>
