@@ -5,17 +5,19 @@ import { Hero } from "../../components/Hero/Hero";
 import { Projects } from "../../components/Projects/Projects";
 import HorizontalScroll from "../../components/Transitions/HorizontalScroll";
 import { ShowcaseTransition } from "../../components/Transitions/ShowcaseTransition";
+import { SlideText } from "../../components/Transitions/SlideText";
 
 export default function Home() {
-  const locale = useLocale()
+  const locale = useLocale();
   return (
     <div>
       <HorizontalScroll key={locale}>
         <Hero />
         <About />
       </HorizontalScroll>
-      <ShowcaseTransition/>
+      <SlideText />
       <Projects />
+      <ShowcaseTransition />
       <Contact />
     </div>
   );

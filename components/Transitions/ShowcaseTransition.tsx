@@ -12,7 +12,7 @@ gsap.registerPlugin(useGSAP);
 export const ShowcaseTransition = () => {
   const [projects, setProjects] = useState(() => getProjects("light"));
 
-  const showcaseRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const theme = localStorage.getItem("theme") ?? "light";
@@ -30,50 +30,100 @@ export const ShowcaseTransition = () => {
     };
   }, []);
 
-  useGSAP(() => {
-    gsap.registerPlugin(ScrollTrigger);
+useGSAP(
+    () => {
+      if (!sectionRef.current) return;
 
-    if (!showcaseRef.current) return;
+      gsap.registerPlugin(ScrollTrigger);
 
-    const cards = showcaseRef.current.querySelectorAll(".project-card");
+      const wrapper = sectionRef.current;
 
-    cards.forEach((card) => {
-      const isEven = card.classList.contains("even");
-
-      gsap.to(card, {
-        x: isEven ? 500 : -500, // derecha si es EVEN, izquierda si es ODD
-        opacity: 0.15,
-        ease: "none",
-        scrollTrigger: {
-          trigger: card,
-          start: "top 85%", // empieza cuando cada card entra al viewport
-          end: "bottom 20%", // termina cuando se va
-          scrub: true,
-        },
+      ScrollTrigger.create({
+        trigger: wrapper,
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: 0.5,
+        animation: gsap.fromTo(
+          ".trigger1",
+          { x: -500 },
+          { x: 0, ease: "none" }
+        ),
       });
-    });
-  });
+
+      ScrollTrigger.create({
+        trigger: wrapper,
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: 2,
+        animation: gsap.fromTo(
+          ".trigger2",
+          { x: 0 },
+          { x: -500, ease: "none" }
+        ),
+      });
+
+      ScrollTrigger.create({
+        trigger: wrapper,
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: 2,
+        animation: gsap.fromTo(
+          ".trigger3",
+          { x: -500 },
+          { x: 0, ease: "none" }
+        ),
+      });
+    },
+    { scope: sectionRef }
+  );
 
   return (
     <div
       className="mt-20 flex flex-col justify-center items-center gap-12 grayscale-25 overflow-hidden"
-      ref={showcaseRef}
+      ref={sectionRef}
     >
-      {projects.map((proj, i) => {
-        return (
-          <div key={i}>
+      <div className="flex gap-2 md:gap-6 trigger1">
+        {projects.slice(0, 3).map((proj, i) => {
+          return (
             <Image
+              key={i}
               height={480}
               width={640}
               src={proj.image}
-              className={`project-card rounded-2xl ${
-                i % 2 === 0 ? "even" : "odd"
-              }`}
+              className={`project-card rounded-2xl`}
               alt="website screenshot"
             />
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
+      <div className="flex gap-2 md:gap-6 trigger2">
+        {projects.slice(3, 7).map((proj, i) => {
+          return (
+            <Image
+              key={i}
+              height={480}
+              width={640}
+              src={proj.image}
+              className={`project-card rounded-2xl`}
+              alt="website screenshot"
+            />
+          );
+        })}
+      </div>
+      <div className="flex gap-2 md:gap-6 trigger3">
+        {projects.slice(7, 10).map((proj, i) => {
+          return (
+            <Image
+              key={i}
+              height={480}
+              width={640}
+              src={proj.image}
+              className={`project-card rounded-2xl`}
+              alt="website screenshot"
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };

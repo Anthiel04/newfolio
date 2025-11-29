@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function page() {
+export default function page({ params }: { params: string }) {
   return (
     <div className="min-h-screen">
       <div>
@@ -12,4 +12,4 @@ export default function page() {
       <div className="rounded-3xl hover:rounded-full transition-all">image</div>
     </div>
   );
-};
+}
