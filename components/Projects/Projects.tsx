@@ -3,10 +3,10 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useRef } from "react";
 
-gsap.registerPlugin(useGSAP)
+gsap.registerPlugin(useGSAP);
 
 interface Project {
   id: string;
@@ -15,36 +15,37 @@ interface Project {
   image: string;
   link?: string;
 }
-
-export const Projects = () => {
-  const projectsRef = useRef<HTMLDivElement>(null);
-  const t = useTranslations("projects");
-
-  // Example placeholder projects
-  const projects: Project[] = [
+function linksWithLocale(locale: string): Project[] {
+  return [
     {
       id: "1",
       titleKey: "project1.title",
       descKey: "project1.description",
       image: "/assets/projects/commerce.webp",
-      link: "#",
+      link: "/" + locale + "/project1",
     },
     {
       id: "2",
       titleKey: "project2.title",
       descKey: "project2.description",
       image: "/assets/projects/python.webp",
-      link: "#",
+      link: "/" + locale + "/project2",
     },
     {
       id: "3",
       titleKey: "project3.title",
       descKey: "project3.description",
       image: "/assets/projects/python.webp",
-      link: "#",
+      link: "/" + locale + "/project3",
     },
   ];
+}
 
+export const Projects = () => {
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const t = useTranslations("projects");
+  const locale = useLocale();
+  const projects = linksWithLocale(locale);
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -64,7 +65,7 @@ export const Projects = () => {
     <section
       id="projects"
       ref={projectsRef}
-      className="relative w-full py-20 bg-bg dark:bg-bg-dark text-primary dark:text-text-dark"
+      className="relative w-full py-20 text-primary dark:text-text-dark z-50 bg-bg"
     >
       <div className="max-w-6xl mx-auto px-6 flex flex-col space-y-12">
         <h2 className="text-3xl font-bold tracking-tight">

@@ -1,15 +1,18 @@
 "use client";
 
+import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+
+gsap.registerPlugin(useGSAP);
 
 export const Footer = () => {
   const footerRef = useRef<HTMLDivElement>(null);
   const t = useTranslations("common"); // "common" corresponde a tus archivos JSON
 
-  useEffect(() => {
+  useGSAP(() => {
     if (!footerRef.current) return;
 
     gsap.from(footerRef.current.children, {

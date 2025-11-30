@@ -3,15 +3,18 @@
   "projects_subtitle": "Algunos de mis trabajos recientes",
 
   "project1": {
-    "title": "Ecosistema K-Mart",
-    "description": "Una plataforma e-commerce completa que incluye tienda, blog, panel de administración y API personalizada. Construida con herramientas modernas de React, autenticación completa, gestión de datos y un sistema de UI escalable."
+    "title": "K-Mart Ecosystem",
+    "description": "Una plataforma de e-commerce completa que incluye tienda, blog, panel de administración y API personalizada. Construida con herramientas modernas de React y sistemas completos de autenticación, gestión de datos y UI.",
+    "story": "K-Mart fue un proyecto para un cliente donde desarrollé un ecosistema completo. Implementé un panel de administración y una API personalizada, optimizando el rendimiento y la escalabilidad. Este proyecto me enseñó a estructurar sistemas complejos de manera eficiente."
   },
   "project2": {
     "title": "upydate",
-    "description": "Un scraper en Python diseñado para automatizar la descarga de actualizaciones de ESET NOD32, permitiendo reintentos, reanudación y manejo de errores. Creado para solucionar un proceso que era prácticamente imposible de realizar manualmente en el taller."
+    "description": "Un scraper basado en Python diseñado para entregar descargas de manera limpia, automatizando un proceso que antes era imposible manualmente en el taller.",
+    "story": "Upydate se creó para automatizar tareas repetitivas de descarga en el taller. El proyecto mejoró mis habilidades en scraping con Python y me enseñó a manejar errores, logs y planificación de manera confiable."
   },
   "project3": {
-    "title": "Conversor JSON a VCF",
-    "description": "Herramienta creada para un cliente que necesitaba convertir contactos exportados desde Telegram en formato JSON a archivos VCF listos para importar. Sencilla, fiable y muy útil."
+    "title": "JSONtoVCF Converter",
+    "description": "Una herramienta creada para un cliente para convertir exportaciones JSON de Telegram en archivos de contactos VCF listos para importar. Diseñada para ser confiable y fácil de usar.",
+    "story": "Este proyecto surgió por un pedido de un cliente para convertir contactos exportados de Telegram a formato VCF. Me enfoqué en la confiabilidad y en crear una herramienta intuitiva que manejara casos complejos con datos reales."
   }
 }

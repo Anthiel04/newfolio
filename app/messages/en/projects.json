@@ -4,14 +4,17 @@
 
   "project1": {
     "title": "K-Mart Ecosystem",
-    "description": "A complete e-commerce platform including store, blog, admin dashboard, and custom API. Built with modern React tooling and full authentication, data management and UI systems."
+    "description": "A complete e-commerce platform including store, blog, admin dashboard, and custom API. Built with modern React tooling and full authentication, data management and UI systems.",
+    "story": "K-Mart was a client project where I developed a complete ecosystem. I implemented an admin dashboard and a custom API, optimizing performance and scalability. This project taught me how to structure complex systems efficiently."
   },
   "project2": {
     "title": "upydate",
-    "description": "A Python-based scraper designed to cleanly deliver downloads, automating a process that was previously impossible manually at the workshop."
+    "description": "A Python-based scraper designed to cleanly deliver downloads, automating a process that was previously impossible manually at the workshop.",
+    "story": "Upydate was created to automate repetitive manual download tasks at my workshop. The project improved my Python scraping skills and taught me how to handle errors, logging, and scheduling reliably."
   },
   "project3": {
     "title": "JSONtoVCF Converter",
-    "description": "A tool built for a client to convert Telegram JSON exports into import-ready VCF contact files. Designed for reliability and ease of use."
+    "description": "A tool built for a client to convert Telegram JSON exports into import-ready VCF contact files. Designed for reliability and ease of use.",
+    "story": "This project was a client request to convert exported Telegram contacts into VCF format. I focused on reliability and creating a tool that was intuitive and could handle edge cases with real-world data."
   }
 }

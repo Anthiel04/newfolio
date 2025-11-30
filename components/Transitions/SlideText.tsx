@@ -104,13 +104,25 @@ export const SlideText = () => {
 
       ScrollTrigger.create({
         trigger: wrapper,
+        start: "top 50%",
+        end: "bottom 0%",
+        scrub: 2,
+        animation: gsap.fromTo(
+          wrapper,
+          { rotateZ: 0, scale: 1 },
+          { rotateZ: 90, scale: 3, ease: "none" }
+        ),
+      });
+
+      ScrollTrigger.create({
+        trigger: wrapper,
         start: "top 80%",
         end: "bottom 20%",
         scrub: 0.5,
         animation: gsap.fromTo(
           ".trigger1",
-          { x: -2000 },
-          { x: 0, ease: "none" }
+          { x: -2000, opacity: 1 },
+          { x: 0, opacity: 0, ease: "none" }
         ),
       });
 
@@ -121,8 +133,8 @@ export const SlideText = () => {
         scrub: 2,
         animation: gsap.fromTo(
           ".trigger2",
-          { translateX: 0 },
-          { translateX: -2000, ease: "none" }
+          { translateX: 0, opacity: 1 },
+          { translateX: -2000, opacity: 0, ease: "none" }
         ),
       });
 
@@ -133,45 +145,47 @@ export const SlideText = () => {
         scrub: 2,
         animation: gsap.fromTo(
           ".trigger3",
-          { translateX: -2000 },
-          { translateX: 0, ease: "none" }
+          { translateX: -2000, opacity: 1 },
+          { translateX: 0, opacity: 0, ease: "none" }
         ),
       });
     },
     { scope: sectionRef }
   );
   return (
-    <section
-      ref={sectionRef}
-      className="wrapper flex flex-col gap-8 overflow-hidden my-20 bg-gray-800 text-white dark:bg-white dark:text-black py-12"
-    >
-      <ul className="flex gap-3 md:gap-6 trigger1">
-        {words.map((val, i) => {
-          return (
-            <li className="text_item text-7xl" key={"medium" + i}>
-              {val}
-            </li>
-          );
-        })}
-      </ul>
-      <ul className="flex gap-3 md:gap-6 trigger2">
-        {words.map((val, i) => {
-          return (
-            <li className="text_item text-9xl" key={"large" + i}>
-              {val.charAt(0).toUpperCase() + val.slice(1)}
-            </li>
-          );
-        })}
-      </ul>
-      <ul className="flex gap-3 md:gap-6 trigger3">
-        {words.map((val, i) => {
-          return (
-            <li className="text_item text-4xl" key={"small" + i}>
-              {val}
-            </li>
-          );
-        })}
-      </ul>
-    </section>
+    <div className="h-screen overflow-hidden">
+      <section
+        ref={sectionRef}
+        className="wrapper flex flex-col gap-8 overflow-hidden my-20 bg-gray-800 text-white dark:bg-white dark:text-black py-12"
+      >
+        <ul className="flex gap-3 md:gap-6 trigger1">
+          {words.map((val, i) => {
+            return (
+              <li className="text_item text-7xl" key={"medium" + i}>
+                {val}
+              </li>
+            );
+          })}
+        </ul>
+        <ul className="flex gap-3 md:gap-6 trigger2">
+          {words.map((val, i) => {
+            return (
+              <li className="text_item text-9xl" key={"large" + i}>
+                {val.charAt(0).toUpperCase() + val.slice(1)}
+              </li>
+            );
+          })}
+        </ul>
+        <ul className="flex gap-3 md:gap-6 trigger3">
+          {words.map((val, i) => {
+            return (
+              <li className="text_item text-4xl" key={"small" + i}>
+                {val}
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+    </div>
   );
 };
