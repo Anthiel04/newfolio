@@ -108,7 +108,7 @@ export const Hero = () => {
           </p>
 
           {/* Weather Message */}
-          <p className="text-sm opacity-80 text-muted">{message}</p>
+          <p className="text-sm opacity-80 bg-accent rounded-xs text-muted">{message}</p>
 
           {/* Call to actions */}
           <div ref={ctasRef} className="flex justify-center gap-4 mt-6">

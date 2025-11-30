@@ -1,11 +1,13 @@
-import { NextIntlClientProvider } from "next-intl";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Geist, Geist_Mono } from "next/font/google";
 import Head from "next/head";
+import { notFound } from "next/navigation";
 import { Footer } from "../../components/Layout/Footer";
 import { Header } from "../../components/Layout/Header";
 import "../globals.css";
 import { getAllMessages } from "../i18n/getAllMessages";
+import { routing } from "../i18n/routing";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,6 +19,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({locale}));
+}
+
 export default async function LocaleLayout({
   children,
   params,
@@ -25,7 +31,12 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }>) {
   const { locale } = await params;
-  setRequestLocale(locale); // importante para que los hooks client sepan el locale
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
+  // Enable static rendering
+  setRequestLocale(locale);
 
   const messages = getAllMessages(locale);
 
@@ -40,7 +51,7 @@ export default async function LocaleLayout({
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Header lang={locale} />
-          <div className="grain"/>
+          <div className="grain" />
           {children}
           <Footer />
         </NextIntlClientProvider>

@@ -8,17 +8,17 @@ type ProjectDetails = {
 };
 
 const PROJECTS: Record<string, ProjectDetails> = {
-  "project1": {
+  project1: {
     image: "/assets/projects/commerce.webp",
     github: false,
     preview: "https://project1.vercel.app",
   },
-  "project2": {
+  project2: {
     image: "/assets/projects/python.webp",
     github: "https://github.com/anthiel04/project2",
     preview: false,
   },
-  "project3": {
+  project3: {
     image: "/assets/projects/python.webp",
     github: "https://github.com/anthiel04/project2",
     preview: false,
@@ -28,10 +28,14 @@ const PROJECTS: Record<string, ProjectDetails> = {
 export default async function Page({
   params,
 }: {
-  params: { project: string };
+  params: { project: string; locale: string };
 }) {
-  const t = await getTranslations("projects");
   const values = await params;
+  const t = await getTranslations({
+    locale: values.locale,
+    namespace: "projects",
+  });
+  console.log(t);
   const project = PROJECTS[values.project] ?? {
     image: "",
     github: "#",
@@ -41,11 +45,10 @@ export default async function Page({
   return (
     <div className="min-h-screen mt-20 p-12">
       <div className="max-w-3xl mx-auto space-y-6">
-        
         <h1 className="text-4xl font-bold">{t(`${values.project}.title`)}</h1>
-        
+
         <p>{t(`${values.project}.description`)}</p>
-        
+
         <div className="flex gap-4">
           {project.github && (
             <Link
@@ -81,7 +84,6 @@ export default async function Page({
         </div>
 
         <p>{t(`${values.project}.story`)}</p>
-
       </div>
     </div>
   );
