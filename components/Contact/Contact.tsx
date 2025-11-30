@@ -93,7 +93,7 @@ export const Contact = () => {
         <h3>PD: Email | Social</h3>
         <button
           type="submit"
-          className="px-6 py-3 bg-accent text-bg rounded-md font-medium hover:opacity-90 transition"
+          className="px-12 py-2 m-auto bg-overlay text-bg rounded-md font-medium hover:opacity-90 hover:scale-105 active:scale-90 transition"
           disabled={status === "sending"}
         >
           {status === "sending" ? t("sending") : t("send")}

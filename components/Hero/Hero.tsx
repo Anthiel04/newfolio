@@ -108,19 +108,19 @@ export const Hero = () => {
           </p>
 
           {/* Weather Message */}
-          <p className="text-sm opacity-80 bg-accent rounded-xs text-muted">{message}</p>
+          <p className="text-sm opacity-80 bg-accent rounded-xs text-bg">{message}</p>
 
           {/* Call to actions */}
           <div ref={ctasRef} className="flex justify-center gap-4 mt-6">
             <Link
               href={`/cv_${locale}.pdf`}
-              className="px-6 py-3 rounded-md font-medium text-bg bg-accent"
+              className="px-6 py-3 rounded-md font-medium text-bg bg-bg hover:scale-105 active:scale-90 duration-300 transition-all"
             >
               {t("download_cv")}
             </Link>
             <Link
               href="#projects"
-              className="px-6 py-3 rounded-md font-medium border border-accent text-primary scroll-smooth"
+              className="px-6 py-3 rounded-md font-medium border border-accent text-primary active:scale-90 scroll-smooth hover:ring-4 hover:ring-accent duration-300 transition-all"
             >
               {t("projects")}
             </Link>

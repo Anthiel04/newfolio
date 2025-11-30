@@ -104,14 +104,14 @@ export const Header = ({ lang }: { lang: string }) => {
           {/* Dark/light toggle */}
           <button
             onClick={() => setDarkMode(!darkMode)}
-            className="p-2 rounded-md border text-primary  border-muted "
+            className="rounded-md border py-1 px-3 text-primary border-muted "
           >
             {darkMode ? "☀️" : "🌙"}
           </button>
 
           {/* Mobile menu toggle */}
           <button
-            className="sm:hidden p-2 rounded-md border text-primary  border-muted "
+            className="sm:hidden p-2 rounded-md border text-primary border-muted "
             onClick={() => setOpen(!open)}
           >
             {open ? "✕" : "☰"}
