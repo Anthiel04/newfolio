@@ -2,13 +2,14 @@
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { useRef } from "react";
 
 gsap.registerPlugin(useGSAP);
 
 export const Footer = () => {
+  const locale = useLocale();
   const footerRef = useRef<HTMLDivElement>(null);
   const t = useTranslations("common"); // "common" corresponde a tus archivos JSON
 
@@ -23,7 +24,12 @@ export const Footer = () => {
       ease: "power2.out",
     });
   }, []);
-
+  const navItems = [
+    { label: t("home"), href: `/${locale}#home` },
+    { label: t("projects"), href: `/${locale}#projects` },
+    { label: t("about"), href: `/${locale}#about` },
+    { label: t("contact"), href: `/${locale}#contact` },
+  ];
   return (
     <footer ref={footerRef} className="py-10 px-6 sm:px-12 bg-bg">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between gap-6">
@@ -32,18 +38,16 @@ export const Footer = () => {
         </p>
 
         <ul className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-start sm:items-center text-lg font-medium">
-          <li className="hover:text-accent transition-colors cursor-pointer">
-            <Link href="#home">{t("home")}</Link>
-          </li>
-          <li className="hover:text-accent transition-colors cursor-pointer">
-            <Link href="#projects">{t("projects")}</Link>
-          </li>
-          <li className="hover:text-accent transition-colors cursor-pointer">
-            <Link href="#about">{t("about")}</Link>
-          </li>
-          <li className="hover:text-accent transition-colors cursor-pointer">
-            <Link href="#contact">{t("contact")}</Link>
-          </li>
+          {navItems.map((item, i) => {
+            return (
+              <li
+                key={item.label + i}
+                className="hover:text-accent transition-colors cursor-pointer"
+              >
+                <Link href={item.href}>{item.label}</Link>
+              </li>
+            );
+          })}
         </ul>
 
         <ul className="flex gap-4 justify-center items-center">

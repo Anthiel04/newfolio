@@ -27,10 +27,10 @@ export const Header = ({ lang }: { lang: string }) => {
   const match = pathname.match(/^\/(en|es)/);
   const locale = match ? match[1] : "en";
   const navItems = [
-    { label: t("home"), href: "#home" },
-    { label: t("projects"), href: "#projects" },
-    { label: t("about"), href: "#about" },
-    { label: t("contact"), href: "#contact" },
+    { label: t("home"), href: `/${locale}#home` },
+    { label: t("projects"), href: `/${locale}#projects` },
+    { label: t("about"), href: `/${locale}#about` },
+    { label: t("contact"), href: `/${locale}#contact` },
   ];
 
   // Scroll handler
