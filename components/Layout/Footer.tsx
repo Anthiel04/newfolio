@@ -66,7 +66,7 @@ export const Footer = () => {
       </div>
 
       <p className="text-center text-xs opacity-60 mt-8 text-primary">
-        &copy; {new Date().getFullYear()} YourName Dev. All rights reserved.
+        &copy; {new Date().getFullYear()} Will Dev. All rights reserved.
       </p>
     </footer>
   );

@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { useRef } from "react";
 
 gsap.registerPlugin(useGSAP);
@@ -41,8 +42,10 @@ export const About = () => {
       <div className="max-w-5xl mx-auto px-6 flex flex-col lg:flex-row items-center lg:items-start gap-12">
         {/* Imagen / Foto */}
         <div className="shrink-0 w-48 h-48 rounded-full overflow-hidden border-4 border-accent about-child">
-          <img
-            src="/assets/me.jpg"
+          <Image
+            width={200}
+            height={200}
+            src="/assets/Me.webp"
             alt="Will"
             className="w-full h-full object-cover"
           />
