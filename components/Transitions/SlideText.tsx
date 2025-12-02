@@ -106,7 +106,7 @@ export const SlideText = () => {
         trigger: wrapper,
         start: "top 50%",
         end: "bottom 0%",
-        scrub: 2,
+        scrub: true,
         animation: gsap.fromTo(
           wrapper,
           { rotateZ: 0, scale: 1 },
@@ -129,7 +129,7 @@ export const SlideText = () => {
       ScrollTrigger.create({
         trigger: wrapper,
         start: "top 80%",
-        end: "bottom 20%",
+        end: "bottom 30%",
         scrub: 2,
         animation: gsap.fromTo(
           ".trigger2",
@@ -141,7 +141,7 @@ export const SlideText = () => {
       ScrollTrigger.create({
         trigger: wrapper,
         start: "top 80%",
-        end: "bottom 20%",
+        end: "bottom 30%",
         scrub: 2,
         animation: gsap.fromTo(
           ".trigger3",

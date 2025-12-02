@@ -5,41 +5,9 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLocale, useTranslations } from "next-intl";
 import { useRef } from "react";
+import { linksWithLocale } from "./data/linksWithLocale";
 
 gsap.registerPlugin(useGSAP);
-
-interface Project {
-  id: string;
-  titleKey: string; // i18next key
-  descKey: string; // i18next key
-  image: string;
-  link?: string;
-}
-function linksWithLocale(locale: string): Project[] {
-  return [
-    {
-      id: "1",
-      titleKey: "project1.title",
-      descKey: "project1.description",
-      image: "/assets/projects/commerce.webp",
-      link: "/" + locale + "/project1",
-    },
-    {
-      id: "2",
-      titleKey: "project2.title",
-      descKey: "project2.description",
-      image: "/assets/projects/python.webp",
-      link: "/" + locale + "/project2",
-    },
-    {
-      id: "3",
-      titleKey: "project3.title",
-      descKey: "project3.description",
-      image: "/assets/projects/python.webp",
-      link: "/" + locale + "/project3",
-    },
-  ];
-}
 
 export const Projects = () => {
   const projectsRef = useRef<HTMLDivElement>(null);
@@ -84,7 +52,7 @@ export const Projects = () => {
                 <img
                   src={project.image}
                   alt={t(project.titleKey)}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full bg-accent-foreground object-contain md:object-cover"
                 />
               </div>
               <div className="p-4">

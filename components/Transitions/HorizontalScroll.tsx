@@ -13,68 +13,72 @@ export default function HorizontalScroll({ children }: Props) {
   const innerRef = useRef<HTMLDivElement | null>(null);
 
   useGSAP(() => {
-    // let ctx: gsap.Context | null = null;
     let stInstance: any | null = null;
 
-    async function setup() {
-      gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
 
-      if (!wrapperRef.current || !innerRef.current) return;
+    if (!wrapperRef.current || !innerRef.current) return;
 
-      const inner = innerRef.current!;
-      const wrapper = wrapperRef.current!;
+    const inner = innerRef.current!;
+    const wrapper = wrapperRef.current!;
 
-      // Convert children in DOM into panels: we used Tailwind classes below,
-      // but ensure DOM layout is consistent (flex row).
-      inner.style.display = "flex";
-      inner.style.flexWrap = "nowrap";
-      inner.style.height = "100vh";
-      inner.style.willChange = "transform";
+    // Convert children in DOM into panels: we used Tailwind classes below,
+    // but ensure DOM layout is consistent (flex row).
+    inner.style.display = "flex";
+    inner.style.flexWrap = "nowrap";
+    inner.style.height = "100vh";
+    inner.style.willChange = "transform";
 
-      // ensure each direct child of inner is full-viewport panel
-      const panels = Array.from(inner.children) as HTMLElement[];
-      panels.forEach((p) => {
-        // Tailwind already sets width/height via classes; ensure flex behavior:
-        p.classList.add("flex-none", "w-screen", "h-screen");
-        p.style.boxSizing = "border-box";
-      });
+    // ensure each direct child of inner is full-viewport panel
+    const panels = Array.from(inner.children) as HTMLElement[];
+    panels.forEach((p) => {
+      // Tailwind already sets width/height via classes; ensure flex behavior:
+      p.classList.add("flex-none", "w-screen", "h-screen");
+      p.style.boxSizing = "border-box";
+    });
 
-      // total horizontal distance to scroll
-      const totalScroll = inner.scrollWidth - window.innerWidth;
-      if (totalScroll <= 0) {
-        // nothing to do (panels not wider than viewport)
-        return;
-      }
-
-      stInstance = gsap.to(inner, {
-        x: -totalScroll,
-        ease: "none",
-        scrollTrigger: {
-          trigger: wrapper,
-          start: "top top",
-          end: () => `+=${totalScroll}`,
-          scrub: 1,
-          pin: true,
-          invalidateOnRefresh: true,
-          snap: {
-            snapTo: 1 / (panels.length - 1),
-            duration: 0.4,
-            ease: "power1.out",
-            directional: true,
-          },
-        },
-      });
+    // total horizontal distance to scroll
+    let totalScroll = inner.scrollWidth - window.innerWidth;
+    if (totalScroll <= 0) {
+      // nothing to do (panels not wider than viewport)
+      return;
     }
 
-    setup();
+    stInstance = gsap.to(inner, {
+      x: -(inner.scrollWidth - window.innerWidth),
+      ease: "none",
+      scrollTrigger: {
+        trigger: wrapper,
+        start: "top top",
+        end: () => `+=${inner.scrollWidth - window.innerWidth}`,
+        scrub: 1,
+        pin: true,
+        invalidateOnRefresh: true,
+        snap: {
+          snapTo: 1 / (panels.length - 1),
+          duration: 0.4,
+          ease: "power1.out",
+          directional: true,
+        },
+      },
+    });
 
-    // refresh / rebuild on resize to avoid mis-calculations
-    let resizeId: number | null = null;
-    const onResize = () => {
-      if (resizeId) window.clearTimeout(resizeId);
-      resizeId = window.setTimeout(() => {}, 120);
+    let resizeTimer: number;
+
+    const handleResize = () => {
+      // Reiniciamos el temporizador
+      clearTimeout(resizeTimer);
+      resizeTimer = window.setTimeout(() => {
+        ScrollTrigger.refresh()
+      }, 150);
     };
-    window.addEventListener("resize", onResize);
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      clearTimeout(resizeTimer);
+      window.removeEventListener("resize", handleResize);
+    };
   });
 
   return (

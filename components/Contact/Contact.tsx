@@ -39,7 +39,7 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative flex flex-col items-center justify-center w-full min-h-screen py-20 bg-bg text-primary dark:bg-bg-dark dark:text-text-dark"
+      className="relative p-2 flex flex-col items-center justify-center w-full min-h-screen py-20 bg-bg text-primary dark:bg-bg-dark dark:text-text-dark"
     >
       <h2 className="text-4xl font-bold mb-8">{t("title")}</h2>
 
@@ -90,7 +90,7 @@ export const Contact = () => {
           rows={5}
           className="px-4 py-2 border border-muted rounded-md bg-bg text-primary dark:bg-bg-dark dark:text-text-dark focus:outline-none focus:ring-2 focus:ring-accent"
         />
-        <h3>PD: Email | Social</h3>
+        <h3 className="text-center">PD: Email | Social</h3>
         <button
           type="submit"
           className="px-12 py-2 m-auto bg-overlay text-bg rounded-md font-medium hover:opacity-90 hover:scale-105 active:scale-90 transition"

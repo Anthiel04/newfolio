@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { CityPlaceholder } from "./components/CityPlaceholder";
 import DevtoolsCLI from "./components/DevToolsCLI";
 import TerminalEgg from "./components/TerminalEgg";
 import Time from "./components/Time";
@@ -14,7 +15,7 @@ import { useWeather } from "./hooks/useWeather";
 export const Hero = () => {
   const [mounted, setMounted] = useState(false);
   const t = useTranslations("common"); // "common" corresponde a tus archivos JSON
-  const locale = useLocale()
+  const locale = useLocale();
   const { weather, city } = useWeather();
   const weatherMain = weather?.weather?.[0]?.main;
   const temp = Math.round(weather?.main?.temp ?? 0);
@@ -92,10 +93,22 @@ export const Hero = () => {
       <div className="relative w-full h-full flex items-center justify-center px-6">
         <div ref={contentRef} className="max-w-3xl text-center space-y-6">
           {/* TIME + WEATHER + LOCATION */}
-            {city && <p className="sm:hidden">{t("location_format", { city, temp, desc })}</p>}
+          {city ? (
+            <p className="sm:hidden">
+              {t("location_format", { city, temp, desc })}
+            </p>
+          ) : (
+            <CityPlaceholder />
+          )}
           <div className="flex justify-center items-center gap-4 font-mono text-sm opacity-90 text-primary ">
             <Time />
-            {city && <p className="hidden sm:block">{t("location_format", { city, temp, desc })}</p>}
+            {city ? (
+              <p className="hidden sm:block">
+                {t("location_format", { city, temp, desc })}
+              </p>
+            ) : (
+              <CityPlaceholder />
+            )}
             <TimeZone />
           </div>
 
@@ -104,11 +117,13 @@ export const Hero = () => {
 
           {/* TITLE */}
           <p className="text-xl opacity-90 text-primary">
-            Full-Stack Developer — React, Node & Cloud
+            Full-Stack Developer — React, Node & Python
           </p>
 
           {/* Weather Message */}
-          <p className="text-sm opacity-80 bg-accent rounded-xs text-bg">{message}</p>
+          <p className="text-sm opacity-80 bg-accent rounded-xs text-bg">
+            {message}
+          </p>
 
           {/* Call to actions */}
           <div ref={ctasRef} className="flex justify-center gap-4 mt-6">

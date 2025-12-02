@@ -74,7 +74,7 @@ export default async function Page({
             <img
               src={project.image}
               alt={t(`${values.project}.title`)}
-              className="w-full h-full object-cover"
+              className="w-full h-full bg-accent-foreground object-contain md:object-cover"
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center opacity-50">

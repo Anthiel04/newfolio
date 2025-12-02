@@ -79,7 +79,7 @@ useGSAP(
 
   return (
     <div
-      className="pt-20 flex flex-col justify-center items-center gap-12 grayscale-25 overflow-hidden z-50 bg-bg"
+      className="py-20 flex flex-col justify-center items-center gap-12 grayscale-25 overflow-hidden z-50 bg-bg"
       ref={sectionRef}
     >
       <div className="flex gap-2 md:gap-6 trigger1">

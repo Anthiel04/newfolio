@@ -3,7 +3,7 @@
   "projects_subtitle": "Algunos de mis trabajos recientes",
 
   "project1": {
-    "title": "K-Mart Ecosystem",
+    "title": "Ecosistema K-Mart",
     "description": "Una plataforma de e-commerce completa que incluye tienda, blog, panel de administración y API personalizada. Construida con herramientas modernas de React y sistemas completos de autenticación, gestión de datos y UI.",
     "story": "K-Mart fue un proyecto para un cliente donde desarrollé un ecosistema completo. Implementé un panel de administración y una API personalizada, optimizando el rendimiento y la escalabilidad. Este proyecto me enseñó a estructurar sistemas complejos de manera eficiente."
   },

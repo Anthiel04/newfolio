@@ -4,7 +4,7 @@
   "about": "Acerca",
   "contact": "Contacto",
   "download_cv": "Descargar CV",
-  "fullstack_title": "Desarrollador Full-Stack — React, Node & Cloud",
+  "fullstack_title": "Desarrollador Full-Stack — React, Node & Python",
   "weather_messages": {
     "Clear": "Día claro, buen momento para crear algo nuevo.",
     "Rain": "Si llueve fuera, construimos dentro.",
@@ -14,7 +14,7 @@
   },
   "location_format": "{city} — {temp}°C — {desc}",
   "utc": "UTC−3",
-  "footer_description": "¡Hola! Soy un desarrollador full-stack apasionado por crear aplicaciones web rápidas y accesibles. Combino código limpio con diseño creativo para generar experiencias de impacto.",
+  "footer_description": "¡Hola! Soy un desarrollador full-stack apasionado por crear aplicaciones web rápidas y accesibles. Combino código limpio con diseño creativo para crear experiencias.",
   "social": {
     "github": "GitHub",
     "linkedin": "LinkedIn",
