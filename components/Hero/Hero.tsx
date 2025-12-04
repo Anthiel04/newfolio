@@ -98,7 +98,7 @@ export const Hero = () => {
               {t("location_format", { city, temp, desc })}
             </p>
           ) : (
-            <CityPlaceholder />
+            <CityPlaceholder className="sm:hidden" />
           )}
           <div className="flex justify-center items-center gap-4 font-mono text-sm opacity-90 text-primary ">
             <Time />
@@ -107,7 +107,7 @@ export const Hero = () => {
                 {t("location_format", { city, temp, desc })}
               </p>
             ) : (
-              <CityPlaceholder />
+              <CityPlaceholder className="hidden sm:block" />
             )}
             <TimeZone />
           </div>
@@ -128,7 +128,7 @@ export const Hero = () => {
           {/* Call to actions */}
           <div ref={ctasRef} className="flex justify-center gap-4 mt-6">
             <Link
-              href={`/cv_${locale}.pdf`}
+              href={`cv/cv_${locale}.pdf`}
               className="px-6 py-3 rounded-md font-medium text-bg bg-bg hover:scale-105 active:scale-90 duration-300 transition-all"
             >
               {t("download_cv")}

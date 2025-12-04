@@ -1,6 +1,10 @@
+import { ComponentPropsWithoutRef } from "react";
 
-export const CityPlaceholder = () => {
-  return (
-    <div className="h-4 bg-muted animate-pulse w-full" />
-  );
+interface DefaultProps extends ComponentPropsWithoutRef<"div"> {
+  className?: string;
+}
+
+export const CityPlaceholder = (props: DefaultProps) => {
+  const baseClass = "h-4 bg-muted animate-pulse w-full";
+  return <div className={`${baseClass} ${props.className}`} />;
 };
