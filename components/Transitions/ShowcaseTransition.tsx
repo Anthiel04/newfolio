@@ -73,6 +73,19 @@ useGSAP(
           { x: 0, ease: "none" }
         ),
       });
+
+
+      ScrollTrigger.create({
+        trigger: wrapper,
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: 2,
+        animation: gsap.fromTo(
+          ".trigger4",
+          { x: 0 },
+          { x: -500, ease: "none" }
+        ),
+      });
     },
     { scope: sectionRef }
   );
@@ -112,6 +125,20 @@ useGSAP(
       </div>
       <div className="flex gap-2 md:gap-6 trigger3">
         {projects.slice(7, 10).map((proj, i) => {
+          return (
+            <Image
+              key={i}
+              height={480}
+              width={640}
+              src={proj.image}
+              className={`project-card rounded-2xl`}
+              alt="website screenshot"
+            />
+          );
+        })}
+      </div>
+      <div className="flex gap-2 md:gap-6 trigger4">
+        {projects.slice(10, 13).map((proj, i) => {
           return (
             <Image
               key={i}

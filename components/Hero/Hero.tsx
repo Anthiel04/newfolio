@@ -100,7 +100,8 @@ export const Hero = () => {
           ) : (
             <CityPlaceholder className="sm:hidden" />
           )}
-          <div className="flex justify-center items-center gap-4 font-mono text-sm opacity-90 text-primary ">
+          <div className="flex justify-center items-center gap-4 font-mono text-sm text-primary bg-white/40 dark:bg-black/40 backdrop-blur-sm px-3 py-1">
+
             <Time />
             {city ? (
               <p className="hidden sm:block">
@@ -113,26 +114,31 @@ export const Hero = () => {
           </div>
 
           {/* NAME */}
-          <h1 className="text-5xl font-bold tracking-tight text-accent">{`Will`}</h1>
+          <h1 className="text-5xl font-bold tracking-tight text-accent">
+            {`Will`}</h1>
 
           {/* TITLE */}
-          <p className="text-xl opacity-90 text-primary">
+          <p className="text-xl text-primary bg-white/40 dark:bg-black/30 backdrop-blur-sm px-4 py-1">
+
             Full-Stack Developer — React, Node & Python
           </p>
 
           {/* Weather Message */}
-          <p className="text-sm opacity-80 bg-accent rounded-xs text-bg">
+          <p className="text-sm bg-white/30 dark:bg-black/30 text-bg px-3 py-1">
+
             {message}
           </p>
 
           {/* Call to actions */}
           <div ref={ctasRef} className="flex justify-center gap-4 mt-6">
-            <Link
-              href={`cv/cv_${locale}.pdf`}
+            <a
+              href={`/cv/cv_${locale}.pdf`}
+              target="_blank"
+              rel="noopener"
               className="px-6 py-3 rounded-md font-medium text-bg bg-bg hover:scale-105 active:scale-90 duration-300 transition-all"
             >
               {t("download_cv")}
-            </Link>
+            </a>
             <Link
               href="#projects"
               className="px-6 py-3 rounded-md font-medium border border-accent text-primary active:scale-90 scroll-smooth hover:ring-4 hover:ring-accent duration-300 transition-all"

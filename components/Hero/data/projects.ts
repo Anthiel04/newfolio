@@ -39,6 +39,14 @@ export const getProjects = (theme: string ) => {
     {
       image: "/assets/showcase/eion.webp",
     },
-
+    {
+      image: "/assets/showcase/wanderlust.png",
+    },
+    {
+      image: "/assets/showcase/idown.png",
+    },
+    {
+      image: "/assets/showcase/vicfolio.png",
+    },
   ];
 };
