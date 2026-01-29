@@ -58,7 +58,7 @@ export const Footer = () => {
           </li>
           <li className="hover:text-accent transition-colors cursor-pointer">
             <Link
-              href="https://www.linkedin.com/in/richard-william-moreira-hernández-9141b52ab"
+              href="https://www.linkedin.com/in/williamhdez"
               target="_blank"
             >
               LinkedIn

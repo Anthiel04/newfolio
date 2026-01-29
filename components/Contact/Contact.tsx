@@ -54,7 +54,7 @@ export const Contact = () => {
           <FaGithub />
         </a>
         <a
-          href="https://www.linkedin.com/in/richard-william-moreira-hernández-9141b52ab "
+          href="https://www.linkedin.com/in/williamhdez"
           target="_blank"
           aria-label="LinkedIn"
           className="hover:text-accent transition-colors"
