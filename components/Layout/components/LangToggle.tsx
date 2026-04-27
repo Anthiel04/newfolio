@@ -18,7 +18,7 @@ export default function LocaleSwitch({ locale }: { locale: string }) {
       href={href}
       prefetch={false}
       scroll={false}
-      className="py-1 px-3 border text-primary border-muted rounded-md hover:bg-accent transition"
+      className="rounded-md bg-gray-900 dark:bg-gray-100 py-2 px-3 text-white dark:text-black"
     >
       {targetLocale.toUpperCase()}
     </Link>

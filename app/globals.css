@@ -128,14 +128,14 @@
   --color-bg: #f9f9f9; /* fondo claro */
   --color-text: #111111; /* texto principal */
   --color-muted: #555555; /* texto secundario */
-  --color-accent: rgb(26, 79, 158); /* acento, botones y links */
+  --color-accent: rgb(15, 52, 108); /* acento, botones y links */
   --color-bg-overlay: rgba(0, 0, 0, 0.05); /* para overlays */
 
   /* dark mode */
   --color-bg-dark: #111111;
   --color-text-dark: #f9f9f9;
   --color-muted-dark: #aaaaaa;
-  --color-accent-dark: #243857;
+  --color-accent-dark: #2660b6;
   --color-bg-overlay-dark: rgba(255, 255, 255, 0.05);
 }
 

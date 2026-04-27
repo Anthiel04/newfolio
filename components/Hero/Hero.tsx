@@ -114,7 +114,7 @@ export const Hero = () => {
           </div>
 
           {/* NAME */}
-          <h1 className="text-5xl font-bold tracking-tight text-accent">
+          <h1 className="text-5xl font-bold tracking-tight text-accent ">
             {`Will`}</h1>
 
           {/* TITLE */}
