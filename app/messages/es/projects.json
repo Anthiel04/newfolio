@@ -3,16 +3,36 @@
   "projects_subtitle": "Algunos de mis trabajos recientes",
 
   "project1": {
-    "title": "Ecosistema K-Mart",
-    "description": "Una plataforma de e-commerce completa que incluye tienda, blog, panel de administración y API personalizada. Construida con herramientas modernas de React y sistemas completos de autenticación, gestión de datos y UI.",
+    "title": "K-Mart E-Commerce",
+    "description": "Una plataforma de e-commerce completa que incluye tienda, blog, panel de administración y API personalizada. Construida con herramientas modernas de React y sistemas completos de autenticación, gestión de datos y UI. Hosteado con Contabo en un VPS, se instaló Coolify para garantizar CI/CD y administración del servidor de una manera más cómoda y eficiente. Instancia de N8N para hacer peticiones diarias a Contabo con el objetivo de hacer un respaldo del VPS, instancia de UMAMI para métricas, 2 ramas dev y prod, instancia de Grafana para los signos vitales del VPS (o reporte en tiempo real de recursos utilizados), respaldos diarios de la base de datos y un cron job para subir a Mega además de borrar respaldos obsoletos. Las fotos se convierten automáticamente a .webp y se generan miniaturas, el SEO es dinámico",
     "story": "K-Mart fue un proyecto para un cliente donde desarrollé un ecosistema completo. Implementé un panel de administración y una API personalizada, optimizando el rendimiento y la escalabilidad. Este proyecto me enseñó a estructurar sistemas complejos de manera eficiente."
   },
-  "project2": {
+   "project2": {
+    "title": "K-Mart Blog",
+    "description": "Una plataforma de e-commerce completa que incluye tienda, blog, panel de administración y API personalizada. Construida con herramientas modernas de React y sistemas completos de autenticación, gestión de datos y UI. Hosteado con Contabo en un VPS, se instaló Coolify para garantizar CI/CD y administración del servidor de una manera más cómoda y eficiente. Instancia de N8N para hacer peticiones diarias a Contabo con el objetivo de hacer un respaldo del VPS, instancia de UMAMI para métricas, 2 ramas dev y prod, instancia de Grafana para los signos vitales del VPS (o reporte en tiempo real de recursos utilizados), respaldos diarios de la base de datos y un cron job para subir a Mega además de borrar respaldos obsoletos. Las fotos se convierten automáticamente a .webp y se generan miniaturas, el SEO es dinámico",
+    "story": "K-Mart fue un proyecto para un cliente donde desarrollé un ecosistema completo. Implementé un panel de administración y una API personalizada, optimizando el rendimiento y la escalabilidad. Este proyecto me enseñó a estructurar sistemas complejos de manera eficiente."
+  },
+   "project3": {
+    "title": "K-Mart Admin",
+    "description": "Una plataforma de e-commerce completa que incluye tienda, blog, panel de administración y API personalizada. Construida con herramientas modernas de React y sistemas completos de autenticación, gestión de datos y UI. Hosteado con Contabo en un VPS, se instaló Coolify para garantizar CI/CD y administración del servidor de una manera más cómoda y eficiente. Instancia de N8N para hacer peticiones diarias a Contabo con el objetivo de hacer un respaldo del VPS, instancia de UMAMI para métricas, 2 ramas dev y prod, instancia de Grafana para los signos vitales del VPS (o reporte en tiempo real de recursos utilizados), respaldos diarios de la base de datos y un cron job para subir a Mega además de borrar respaldos obsoletos. Las fotos se convierten automáticamente a .webp y se generan miniaturas, el SEO es dinámico",
+    "story": "K-Mart fue un proyecto para un cliente donde desarrollé un ecosistema completo. Implementé un panel de administración y una API personalizada, optimizando el rendimiento y la escalabilidad. Este proyecto me enseñó a estructurar sistemas complejos de manera eficiente."
+  },
+   "project4": {
+    "title": "Ecosistema K-Mart",
+    "description": "Una plataforma de e-commerce completa que incluye tienda, blog, panel de administración y API personalizada. Construida con herramientas modernas de React y sistemas completos de autenticación, gestión de datos y UI. Hosteado con Contabo en un VPS, se instaló Coolify para garantizar CI/CD y administración del servidor de una manera más cómoda y eficiente. Instancia de N8N para hacer peticiones diarias a Contabo con el objetivo de hacer un respaldo del VPS, instancia de UMAMI para métricas, 2 ramas dev y prod, instancia de Grafana para los signos vitales del VPS (o reporte en tiempo real de recursos utilizados), respaldos diarios de la base de datos y un cron job para subir a Mega además de borrar respaldos obsoletos. Las fotos se convierten automáticamente a .webp y se generan miniaturas, el SEO es dinámico",
+    "story": "K-Mart fue un proyecto para un cliente donde desarrollé un ecosistema completo. Implementé un panel de administración y una API personalizada, optimizando el rendimiento y la escalabilidad. Este proyecto me enseñó a estructurar sistemas complejos de manera eficiente."
+  },
+   "project5": {
+    "title": "CAG Registro Comunitario",
+    "description": "Una página simple para que se registren los integrantes del CAG pertenecientes a la iglesia internacional número 1 y la iglesia checa. Está montado con NextJS en Vercel y la información se registra en un SpreadSheet de Google para que no le fuera demasiado complicado la modificación, filtrado y métricas",
+    "story": "Este registro comunitario surgió a partir de notar que el diácono llevaba toda la información en papel, le ofrecí digitalizar todo el proceso para ahorrarle tiempo."
+  },
+  "project6": {
     "title": "upydate",
     "description": "Un scraper basado en Python diseñado para entregar descargas de manera limpia, automatizando un proceso que antes era imposible manualmente en el taller.",
     "story": "Upydate se creó para automatizar tareas repetitivas de descarga en el taller. El proyecto mejoró mis habilidades en scraping con Python y me enseñó a manejar errores, logs y planificación de manera confiable."
   },
-  "project3": {
+  "project7": {
     "title": "JSONtoVCF Converter",
     "description": "Una herramienta creada para un cliente para convertir exportaciones JSON de Telegram en archivos de contactos VCF listos para importar. Diseñada para ser confiable y fácil de usar.",
     "story": "Este proyecto surgió por un pedido de un cliente para convertir contactos exportados de Telegram a formato VCF. Me enfoqué en la confiabilidad y en crear una herramienta intuitiva que manejara casos complejos con datos reales."

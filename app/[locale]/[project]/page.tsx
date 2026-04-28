@@ -9,16 +9,36 @@ type ProjectDetails = {
 
 const PROJECTS: Record<string, ProjectDetails> = {
   project1: {
-    image: "/assets/projects/commerce.webp",
+    image: "/assets/projects/kcommerce.webp",
     github: false,
     preview: "https://project1.vercel.app",
   },
   project2: {
+    image: "/assets/projects/kblog.png",
+    github: false,
+    preview: "https://project1.vercel.app",
+  },
+  project3: {
+    image: "/assets/projects/kadmin.png",
+    github: false,
+    preview: "https://project1.vercel.app",
+  },
+  project4: {
+    image: "/assets/projects/python.webp",
+    github: false,
+    preview: "https://project1.vercel.app",
+  },
+  project5: {
+    image: "/assets/projects/cag.png",
+    github: false,
+    preview: "https://project1.vercel.app",
+  },
+  project6: {
     image: "/assets/projects/python.webp",
     github: "https://github.com/anthiel04/project2",
     preview: false,
   },
-  project3: {
+  project7: {
     image: "/assets/projects/python.webp",
     github: "https://github.com/anthiel04/project2",
     preview: false,

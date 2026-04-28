@@ -22,7 +22,7 @@ export const getProjects = (theme: string ) => {
       image: "/assets/showcase/vanilla.webp",
     },
     {
-      image: "/assets/projects/commerce.webp",
+      image: "/assets/projects/kcommerce.webp",
     },
     {
       image: "/assets/showcase/memes.webp",
