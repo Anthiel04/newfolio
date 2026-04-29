@@ -8,6 +8,8 @@ import { Projects } from "../../components/Projects/Projects";
 import HorizontalScroll from "../../components/Transitions/HorizontalScroll";
 import { ShowcaseTransition } from "../../components/Transitions/ShowcaseTransition";
 import { SlideText } from "../../components/Transitions/SlideText";
+import { Carousel } from "../../components/ui/carousel";
+import { slides } from "../../components/ui/data/slides";
 
 export default function Home() {
   const locale = useLocale();
@@ -23,8 +25,12 @@ export default function Home() {
       <CityPlaceholder />
       <Projects />
       <CityPlaceholder />
+      <section className="my-24">
+        <Carousel slides={slides} />
+      </section>
+      <CityPlaceholder />
       <ShowcaseTransition />
-      <CityPlaceholder/>
+      <CityPlaceholder />
       <Contact />
       <CityPlaceholder />
       <Stats />
